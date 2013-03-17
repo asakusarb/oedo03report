@@ -1,0 +1,528 @@
+10:00-10-15 Opening</h3>
+基調講演、招待講演、LTよりも少し長めのNinja Talksのご紹介
+
+10:15-10:45 招待講演</h3>
+@makoto_inoue</a>:『A Rubyist life in London』</p>
+
+Londonでどういう暮らしをしているか
+
+visaをどうとったか
+working visa が確実
+もうないけど、highly skilled migration program というのがあった
+*spouse visa 奥さん、旦那さんがイギリス人というときのvisa
+working holiday visa
+
+とってもいろいろあった
+2008 new bamboo という会社に入った
+
+2010年は pusher をしてた
+2011年は sinsai info を
+外資系の企業ばかり
+
+topic
+-community
+-company
+-business
+-Rubyist and Japanese
+
+community
+LRUG London Ruby User Group
+skillsmatter.comというトレーニング会社がビデオを撮ってくれている
+おもしろいフォーマット
+ぺちゃくちゃスタイル
+
+London Job Market
+フリーランスが多い？
+itjobswatch.co.uk でいろいろ試算できる
+フリーランスがおいしいので、みんなフリーランスしてるみたい
+
+company
+NewBamboo coderwall 31thくらい
+受託会社、pusher というしくみを作ったり、ツールを作っちゃう
+Mandays という誰が何にアサインできているかを可視化するツール
+
+新しい技術に携われるのがいい
+大きな、よい会社とお付き合いできるのが会社にとっても良い
+
+よくないこと
+ビジネスとしてどうよとか
+
+elastic (揮発的な)エンジニア にはなりたくないよね
+一ヶ月だけあっち手伝ってきてとか
+
+Tender という競争入札
+
+Rubyist and Japanese
+Rubyistが他の言語とは違ってユニークなのは
+日本語リソースが多い。翻訳できる
+るびま英訳作業を、社内で見てもらったり
+長い英語を書くスタミナがないと思う
+
+@ono says
+欧米のRubyistで英語の正確性を気にする人はいない
+google translate よりも少しいい英語が手に入ればそれでうれしい
+
+
+つまらない
+謝らない
+脱線しない
+
+
+10:50-12:00 Ninja Talks 1</h3>
+
+@takkanm</a>:『気づいたらここに立っていた(仮)』<br>
+大江戸Ruby会議のテーマ: 生活発表会
+
+今日話すこと
+before_asakusa
+after_asakusa
+最近やってること
+
+2002年、大学に入ってたのしいRubyを買う
+2006年、趣味のスクリプティング
+2008年、仕事で
+
+みんなのために書くというモチベーションはなく
+自分のために書く生活を送っていた
+
+what_method というgem
+
+仕事でRubyを書けていなかったフラストレーション
+
+blogによく書いていたが、自己完結して終わり
+
+転機！
+2009/8/25 はじめての Asakusarb #15 実は誕生日
+オープンソースを普通に直している人が近くにいたことが衝撃的だった
+自分の範囲内でもOSS活動できるんだと知った
+
+やったこと
+Rubyspecで分かる範囲で修正報告
+使ってるツールの不満を治す
+チケット
+
+特別な力がなくてもできることがある
+
+最近やってること
+Celluloid
+ thread を actor っぽく書けるライブラリ
+sidekiq
+ rescue のようなバックグラウンドで処理をするためのライブラリ
+ resque とちがい、スレッドで非同期処理させるため省メモリ
+
+
+@katsyoshi</a>: 『asakusa.rbに一年間通ったらこうなった』
+mikutter mikutter-fluentd, fluentd-plugin-serialport
+
+参加してみたかった 遠い
+上野のあたりで働くことになったのでさんかした
+
+Rubyとのつきあい
+ 2008年ピッケル本
+
+mikutter を知ってしまった Rubyで書かれてるGUIのtwitterクライアント
+
+mikutter-plugin
+ fav.rb
+ mikutter-jubatus
+  何でそれfav るの？！とかｗ
+fluentd もlog集めるのが楽なので
+ タイムライン全部保存したらいいやん
+
+@mrkn</a>: 『某レシピ共有サイトの Ruby 1.9 対応で大変苦労しました』<br>
+クックパッドのdev infra エンジニア => batman
+
+Rubyのバージョンアップをすることでレスポンスタイムがかなり改善する
+
+1.9.3 移行で苦労したこと
+Rubyのバージョンを上げる仕事をmrknさんが入社後ずっとやっていた
+謎のSEGV, テストが遅すぎる
+一度保留
+テストなど大改造
+
+1.9が動く環境を提供してなかった私が悪かった
+マジコメ入れるスクリプトを作ったよ
+
+if condifiton: という書き方が、 syntax error を引き起こす
+
+items.each do |@item| インスタンス変数をぶち込めた
+
+
+レンダリングまで syntax error が遅延する
+
+Tempfile のオープンモードが +w に固定される
+
+encoding => UTF-8
+テンポラリファイルにjpeg保存できない
+
+to_s の挙動の変化
+array.to_s と array.first.to_s の値が違う
+
+(time..time).include? が呼べなくなった
+期間限定のコードで増えていく
+cover を使ってくださいと言うのも辛い
+モンパチあてて、waring出すようにした
+
+Date#step　が ActiveSupport::Durationを拒絶しだす
+
+enum with index => each_with_index に置き換え>
+
+next で抜けられない問題
+
+多重代入
+lambda 
+
+Symbol#to_intがなくなったよ
+
+正規表現の非互換
+\w US-ASCII の範囲になった
+\W \p{Word}
+>
+NKF 互換コード
+NKF を直接プロダクトコードで呼んでいるところがあったので
+互換コードを使う
+
+打倒tmail
+届いたメールの解析を tmail でやっていた
+tmail => mail.gem
+tmail のバグに依存したコードがあった
+
+感想
+よくないコードを禁止する　のは大事
+便利だったことができなくなるのは悲しい
+
+移行Tips
+Rubyのバージョンごとにモンキーパッチを分けると便利
+initializer で読み込んじゃう
+新しいバージョンで導入されるメソッドはモンキーパッチで用意する
+
+13:30-14:00 基調講演1</h3>
+@koichisasada</a>: 『Ruby の GC の問題点と善手法についての一考察』</p>
+asakusa.rb の初期メンバー
+RA理事
+Rubyの会 一般会員
+Heroku MTS 平社員
+大学との縁が切れた
+
+つまらないCMSはおまかせ下さい
+
+Ruby2.0をリリースして忙しい日々を送っていました
+
+GC
+Giant Colossus
+
+Ruby2.0リリース
+Rubyist Magazine 2.0 特集
+英語記事もリリースできた
+充実した特集になった
+
+VM周りを整理しました
+Ruby2.0のリリースマネージャ mame さん
+2.0のような互換性がきになる節目に互換性を売りにできてよかった
+debugger2
+
+unicornを使ってみてね
+GCをやるとモテる？！
+
+GCの話
+{RubyのGCの}
+概要
+基本的に Mark&sweep
+ 辿ることのできるオブジェクトをmark
+ たどれなかったオブジェクトを回収
+
+conservative Mark&sweep
+ Rubyの最初のバージョンから採用している方式
+ RubyのM&Sは保守的
+  ベタメモリの中に何があるかわからない
+  JNI(java)では、おまじないをかなり書かなきゃいけないけど、
+  Rubyだと、すっきり書ける
+
+1.9.3から入った Lazy Sweep
+ mark と sweep をまとめて行うと、GCで止まる時間が長くなる
+ 利点
+  一回のGCの停止時間が短い
+  キャッシュメモリの局所参照性が高くなる
+ 欠点
+  メモリ解放が億寝る
+  スループットは変わらない
+
+Bitmap marking from Ruby2.0.0
+ Copy on Write Friendly になって fork する人が幸せに
+ fork したときに どちらかのプロセスで何かしら書き込みがあったときに、書き込んだ場所だけ実際のコピーを行う
+ unicorn では、fork しまくるので、実感しやすいと思う
+
+問題点
+まだまだ効率が悪い
+Cruby の Cfirndly が足かせになってる
+
+改善案の検討
+今後の展望
+制限付き世代別GCを入れたい
+
+Cで拡張が書けるのはうれしいけど、拡張したのが負債になってく
+
+
+14:00-15:10 Ninja Talks 2</h3>
+
+@yuri_at_earth</a>:『RubyConfのNinjaの話の続きのおはなし』<br>
+OSDC.twというのがある
+mruby on Eclipse development env
+
+最近、mruby でもう挫折しない組み込み開発
+
+組み込みのイメージ　難しい大変
+組み込みは、 大変そう > 楽しそう
+
+STM Discovery
+Ecplipse 用 mruby プラグイン
+
+mruby コンパイル　Eclipse上で実機もステップ実行できる
+
+@morgan_randy</a>:『Travis-ciでのemberjsのi18n』<br>
+仕事は2月末までは、管理してた
+Rubyが好きだから
+Seattle 出身
+axlsx
+ember i18n
+travis の中で複数言語化していくには
+技術者じゃない翻訳者？
+
+localeapp
+localeapp-i18n-js
+i18n-js
+
+Localeapp をぜひ使うべき
+
+static なサイトになった
+how to asset compliation for i18n-js??
+
+(rake-pipeline-web-filters)
+asset pipeline に似ている
+こういうファイルをこういうフィルタに従って差し替えてくださいという
+
+travis では、データが変われば画面が変わる
+rake-pipeline-i18n-fileters
+locale bound
+
+@hsbt</a>: 『ぼくのかんがえたさいきょうのお問い合わせ管理システム』<br>
+Asakusa.rbに来るとRubyコミッタになれる
+
+www.ruby-lang.org => radiant から Jekyll に
+bugs.ruby-lang.org => redmine 1.3 Rails,Rubyアップデート業務 独自改造をプラグイン化して、バージョンに追随
+Ruby Application CI よくゆかうアプリケーションをtrunkで動かすことでバグ報告
+eban/shugo業 サーバー管理
+
+
+paperboy & co で何をしているか
+カスタマーサービス
+ツール改善など
+
+お問い合わせ検索が5~10分経っても見つからない
+solr のキャッチアップのためになんとかしますよ！
+
+sunspot というgem が solr を使う上でかなりいいらしい
+
+rbenv
+solr
+supervisord
+nginx
+までやってくれる puppet
+
+15:25-15:55 基調講演2</h3>
+@a_matsuda</a>: 『Asakusa.rb vs. the World』</p>
+大江戸Ruby会議
+地域Rubyist集団、Asakusa.rb が開催するMeetup
+コードについて語るところ
+100回 => 大江戸Ruby会議1回
+つまり、二年に一度、大江戸Ruby会議
+
+普段やっていること
+campfire でchat
+basecamp
+issues
+issues
+issues after fxxking issues
+
+Committer のお仕事
+メンテナに近い
+
+AsakusaでRailsをやる、という位置エネルギーのおかげで、Railsモンスターたちと対面できる
+Asakusaに住んでいてよかった
+
+vs. the world
+britruby's tragedy
+
+diversity is good
+good どころか必要不可欠
+
+diversity is mandatory
+日本人であることが、diversityを提供できているのではないか
+
+日本人スピーカーの売り手市場
+
+asakusaに集まっているだけで情報も集まってくる
+asakusaと世界の情報格差に驚愕　僕らしか知らないことが結構ある
+
+講演で海外旅行にいける
+
+requirements
+通りそうなCFPが書けるだけの英語力
+
+必殺技
+開い
+コミュニティ
+アジャイル
+ソーシャルコーディング
+とかは。英語でしゃべるときに抽象度が高すぎるので、無理だろ(笑)
+
+code は世界共通言語なので、もっと書いて行くのが必殺技につながる
+
+asakusa.rb で毎週やっていることが世界にも通用するよ
+
+15:55-17:05 Ninja Talks 3</h3>
+
+@yotii23</a>: 『Diversity is Good. RailsGirls Tokyoの取り組みと、そしてあなたがいつか得られるもの』<br>
+Rails Girls 女性にRailsの技術を教えようという会
+Linda 天使
+
+原田洋子さんのおかげでtokyo 1st
+うらやま はてなの人が kyoto
+鳥井さんが tokyo 2nd
+
+プログラマにならなくてもいい
+興味を持ってもらう
+
+1日に何かができるわけじゃないので、Moreという場所を用意している
+IT開発現場にはまだまだ女性の割合が少ない
+
+Girls の意味
+今まで技術が届かなかった場所に届いた => もっと光を！じゃないか
+プログラミングをもっと普通の人の手に
+女性以外を排除したいわけじゃなくて、多様性を求めている
+
+OSE Open Source Event 
+なぜ続けているか　続けられるか
+豊富なGuideと、Github上での管理
+OSE 一人が作るイベントが世界に広まることはない
+世界中の必要な人が必要なだけ豊かにしていく無防備なイベント
+
+Girlsのラベルを張り替える例
+Rails 寺子屋
+
+Rails Girls からの、Rails を学びたい人はたくさんいるということに気がついた
+公開された Girls マニュアルをそのまま利用
+他のところに開催リソースを注力できる
+
+@yuki24</a>: 『From 0 to 1: How to Get Involved in "Open Source"』<br>
+Gemfile　を使った時点で、君とオープンソースとの関係性は始まっているんだッ！
+楽しようとしてgem使ったら動かない。これは重要なサイン
+苦痛だと思った経験が大事で、楽にしていこうと思う
+
+よいバグレポート
+具体的なバージョンの提示、例外内容とスタックトレースを含んでいる
+バグが生まれたcommit を示している
+落ちるテストが示されている
+
+OSSのソースコードを呼んでいると、なんだこのコードは！ってなるんだけど
+どんどん読んで、コードリーディングスキルを高めるしか無い
+
+良くないプルリク
+テストがない
+テストが通っていない
+特定のバージョンで動かない
+
+おせっかいくらいがちょうどよい
+
+エンジニアはコードで会話できるから大丈夫
+そんなの幻想
+英語を学ばない言い訳にしちゃうのはよくない
+
+@takeshinoda</a>: 『Rubyを始点としてもう一つのエンタープライズ開発を続けたあるSIerの事例』<br>
+Sier OSS 推進フォーラム　アプリケーション部会
+
+流しのタクシーに載るか
+タクシーを見つけるか
+タクシーを呼ぶしかない
+
+タクシーの無線動向
+アナログからデジタル無線に スカイツリーから発信してる
+
+ビジネス同士の会話
+機器買い替え高いよね
+携帯安いよね
+そういえば！
+
+msgpack で、android とやりとりしたり
+Ruby1.9.3 や Rails 3.2 など
+
+Ruby と関わる開発の日常
+Rubyの開発に慣れていない若手の開発メンバー
+少しずつRuby界隈で利用されているライブラリに慣れ親しむ
+業務時間としてRuby会議に参加できるようにしてもらう
+
+少しずつ変化が
+メソッドの挙動が変わっている原因は、Railsのコードを読むとこれが原因だよとか意識高いこと言ってきた
+
+Rubyコミュニティで活躍している人のバックグラウンドはとても多彩
+SIだからどうとかじゃなくて、
+
+
+7:05-17:35 招待講演2</h3>
+@nari3</a>: 『桐島、Rubyやめるってよ』
+コードの匂いがしない
+
+プログラミングへの向き合い方というエモい話
+今コード書いている人、どうぞ続けてください
+
+俺ってばスゲー感が最初の方あるよね
+
+何者にもなれないお前がなんでプログラミングをづづけているのか
+
+コードを書く動機
+
+初めてコードを書いた時のこと
+日常の問題を解決しようとか
+
+今もそうです
+GCの改善を続けている
+mame さん、 Quine を愛する変態紳士
+なんで Quine を書いているんですか？
+よくわかりません
+
+でも書いている時が一番楽しい
+
+Matz さん
+なぜ作っているのか
+ただの趣味
+
+竹内郁雄先生
+TAO
+tak takeuchi 関数
+
+三人とも見ているととても遊んでいる！
+遊ぶためなら目的を選ばない　でいいんじゃないかな
+遊び重要
+書きたいものがないと書けないっていう人がいるけど
+気軽に遊び始める感じでやればいいんじゃないのかね
+手軽に遊ぶには
+
+yharaさん
+大人な遊びが得意
+esolang 
+
+プログラミング = 遊び
+
+プロコン
+AtCoder
+
+心配するのはやめて
+コードを書いて
+幸せになろう
+
+Bad code is better than no code
+
+竹内郁雄さん
+真の創造者は目的を持たない
+しかしまさにそのことにより
+すべての目的を見事に果たす
