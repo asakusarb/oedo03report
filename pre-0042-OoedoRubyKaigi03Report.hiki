@@ -80,6 +80,9 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 @yuri_at_earth さんによる、mruby を使った組み込み開発入門のお話でした。組み込み開発は「プログラミングを書いて何かする」状態にするまでの環境整備がとても大変なので、挫折してしまう人が多いとのことです。そこで STM32F4-Discovery という安価な組み込み評価キットをターゲットにして、mruby で組み込み開発をできるようにするまでの手順を整備して、組み込み開発にたどりつくまでの敷居を下げる取り組みをされているとのことでした。
 
 ! Ninja Talks 『Travis-ciでのemberjsのi18n』
+
+@morgan_randy さんによる、JavaScript の MVC フレームワークである Ember.js を多言語に対応させるお話でした。Ember.js は JavaScript を利用した静的なサイトを作成するのに利用され、Travis CI の Web クライアントとしても利用されています。@morgan_randy さんは rake-pipeline-i18n-filter と localeapp-handlebars_i18n を利用して多言語用 YAML を JSON に変換して Ember.js による多言語対応の静的なサイトを構築するデモを実施されていました。
+
 ! Ninja Talks 『ぼくのかんがえたさいきょうのお問い合わせ管理システム』
 ! 基調講演 『Asakusa.rb vs. the World』
 ! Ninja Talks 『Diversity is Good. RailsGirls Tokyoの取り組みと、そしてあなたがいつか得られるもの』
