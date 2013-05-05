@@ -76,6 +76,9 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 
 
 ! Ninja Talks 『RubyConfのNinjaの話の続きのおはなし』
+
+@yuri_at_earth さんによる、mruby を使った組み込み開発入門のお話でした。組み込み開発は「プログラミングを書いて何かする」状態にするまでの環境整備がとても大変なので、挫折してしまう人が多いとのことです。そこで STM32F4-Discovery という安価な組み込み評価キットをターゲットにして、mruby で組み込み開発をできるようにするまでの手順を整備して、組み込み開発にたどりつくまでの敷居を下げる取り組みをされているとのことでした。
+
 ! Ninja Talks 『Travis-ciでのemberjsのi18n』
 ! Ninja Talks 『ぼくのかんがえたさいきょうのお問い合わせ管理システム』
 ! 基調講演 『Asakusa.rb vs. the World』
