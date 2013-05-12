@@ -84,6 +84,9 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 @morgan_randy さんによる、JavaScript の MVC フレームワークである Ember.js を多言語に対応させるお話でした。Ember.js は JavaScript を利用した静的なサイトを作成するのに利用され、Travis CI の Web クライアントとしても利用されています。@morgan_randy さんは rake-pipeline-i18n-filter と localeapp-handlebars_i18n を利用して多言語用 YAML を JSON に変換して Ember.js による多言語対応の静的なサイトを構築するデモを実施されていました。
 
 ! Ninja Talks 『ぼくのかんがえたさいきょうのお問い合わせ管理システム』
+
+@hsbt さんによる、@hsbt さんの勤務先のカスタマーサービス部門が利用している「お問い合わせ管理システム」の問題点を改善したお話でした。既存の「お問い合わせ管理システム」では SQL の LIKE 演算子による「なんちゃって全文検索」であったために動作が遅かったところを、Apache Solr による全文検索エンジンを組み込むことで高速化に成功したとのことでした。また今回実装された「お問い合わせ管理システム」Whispered とその動作環境を構築してくれる構成管理スクリプト whispered-puppet はオープンソースとして GitHub に公開されているそうですので、興味のある方は参照されてはいかがでしょうか。
+
 ! 基調講演 『Asakusa.rb vs. the World』
 ! Ninja Talks 『Diversity is Good. RailsGirls Tokyoの取り組みと、そしてあなたがいつか得られるもの』
 ! Ninja Talks 『From 0 to 1: How to Get Involved in "Open Source"』
