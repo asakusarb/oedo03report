@@ -89,6 +89,9 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 
 ! 基調講演 『Asakusa.rb vs. the World』
 ! Ninja Talks 『Diversity is Good. RailsGirls Tokyoの取り組みと、そしてあなたがいつか得られるもの』
+
+@yotii23 さんによる、Rails Girls Tokyo というイベントについてのお話でした。Rails Girls は 2010 年から始まった「女性に Ruby on Rails の技術を伝える」というイベントで、ヨーロッパ、アジア、北米、南米など世界中で開催されているそうです。@yotii23 さんは第二回の Rails Girls Tokyo の主催者でもあり、女性だけでなく今まで技術が届かなかった「普通の人たち」の手に技術を伝えたい、そのために Rails Girls というイベントのフレームワークを活用してほしいとのことでした。 Rails Girls はイベントのマニュアルが GitHub に公開されていますので、同様のイベントを開催したいという方は参考にされてはいかがでしょうか。
+
 ! Ninja Talks 『From 0 to 1: How to Get Involved in "Open Source"』
 ! Ninja Talks 『Rubyを始点としてもう一つのエンタープライズ開発を続けたあるSIerの事例』
 ! 招待講演 『桐島、Rubyやめるってよ』
