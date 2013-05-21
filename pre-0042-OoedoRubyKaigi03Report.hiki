@@ -89,7 +89,10 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 ! 写真の提供
 ! 書いた人たち
 !! @gunjisatoshi (Asakusa.rb)
+
 !! @joker1007 (Asakusa.rb)
+
+昨年末に引っ越して浅草在住になり、Asakusa.rb に参加するようになりました。浅草は食事処が沢山あって気に入ってます。今回、大江戸 Ruby 会議にスタッフとして参加できた事を嬉しく思っています。
 
 !! @hokkai7go (Asakusa.rb)
 
