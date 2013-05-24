@@ -1,4 +1,5 @@
 !RegionalRubyKaigi レポート (??) 大江戸 Ruby 会議 03
+::http://farm9.staticflickr.com/8531/8564408660_9452806671.jpg
 :開催日:2013-03-16(土) 10:00 - 17:50
 :開催場所:[[深川江戸資料館|http://www.kcf.or.jp/fukagawa/]]小劇場
 :主催:[[Asakusa.rb|http://asakusa.rubyist.net/]]
@@ -9,7 +10,7 @@
 
 ! はじめに
 
-::http://farm9.staticflickr.com/8530/8563625056_86fa940c36.jpg
+http://farm9.staticflickr.com/8530/8563625056_86fa940c36.jpg
 
 2013 年 3 月 16 日に、地域 Ruby の会のひとつである Asakusa.rb の 200 回目の meetup を記念して「大江戸 Ruby 会議 03」が開催されましたので、本記事にてレポートをお送りします。
 
@@ -19,32 +20,32 @@
 !! @makoto_inoue
 !!! 『A Rubyist life in London』
 
-http://farm9.staticflickr.com/8250/8564713948_1709b09293.jpg
+::http://farm9.staticflickr.com/8250/8564713948_1709b09293.jpg
 
 今はロンドンに住んでいる @makoto_inoue さんのお話は、ロンドンでの暮らしと NewBamboo での働き方、海外から見た Rubyist の姿についてでした。
 Rubyistが他とは違うのは日本語リソースが多いことで、海外に向けて翻訳するチャンスがあり、しかもRubyistはとても英語ができるのに長文を書くスタミナがなくてもったいないと海外から日本のRubyistについて思うところをおっしゃっていました。
 
 ! Ninja Talks 『気づいたらここに立っていた(仮)』
 
-::http://farm9.staticflickr.com/8391/8564715426_e43e412bc6.jpg
+http://farm9.staticflickr.com/8391/8564715426_e43e412bc6.jpg
 
 @takkanm さんが Asakusa.rb に参加する以前の話と、Asakusa.rb に参加してからどのように自分が変わったか、というお話でした。Asakusa.rb に参加する以前は「自分のためにコードを書く」という意識であったところが、 Asakusa.rb に参加して「オープンソースを直すというのがあたりまえ」という人たちを目の当たりにすることで、「積極的にオープンソースに貢献していこう」という意識に変わったとのことでした。また「特別な力がなくてもオープンソースに貢献できる」ことを強調され、使ってるツールに不満があったら自分の出来る範囲でバグ修正やバグ報告をしましょう、とおっしゃっていました。
 
 ! Ninja Talks 『asakusa.rbに一年間通ったらこうなった』
 
-http://farm9.staticflickr.com/8090/8563612835_9d8c7dde4c.jpg
+::http://farm9.staticflickr.com/8090/8563612835_9d8c7dde4c.jpg
 
 @katsyoshi さんによる mikutter という Ruby で書かれた Twitter クライアントに関するお話でした。mikutter の動かし方から mikutter のプラグインの説明、mikutter で利用しているログ収集ツール fluentd の説明、また fluentd の安定版である td-agent を ARM アーキテクチャで動作させた話など、「普段の Asakusa.rb で @katsyoshi さんが黙々とやっていること」を存分に公開していただきました。
 
 ! Ninja Talks 『某レシピ共有サイトの Ruby 1.9 対応で大変苦労しました』
 
-::http://farm9.staticflickr.com/8087/8564716136_7d8a12c4b4.jpg
+http://farm9.staticflickr.com/8087/8564716136_7d8a12c4b4.jpg
 
 @mrkn さんによる、今まで Ruby 1.8 上で動作していた某レシピ共有サイトを Ruby 1.9 上で動作させるために色々と苦労されたお話でした。中でも「バグを前提として書かれていたコードが、Ruby のバージョンが上がることで問題になる」という話や、「良くない書き方をすると警告を出すようにして、開発者に自発的に直すようにしてもらう」といった工夫の話など、いかにして Ruby 1.8 から Ruby 1.9 への非互換性を「組織として」乗り越えて行ったかを実装面と運用面から具体的な体験談とともに解説されていたのが印象的でした。
 
 ! 基調講演 『Ruby の GC の問題点と改善手法についての一考察』
 
-http://farm9.staticflickr.com/8368/8563616489_f081a72670.jpg
+::http://farm9.staticflickr.com/8368/8563616489_f081a72670.jpg
 
 設立初期からの Asakusa.rb メンバーで、Ruby コミッタの ささだこういち (@koichisasada) さんによる基調講演があり、Ruby のGCについて、これまで改善してきた事とこれからの展望について、分かりやすく発表してくれました。ささださんは、現在 Heroku でフルタイムコミッタとして活躍しており、最近は ==ワンダと巨像== GC の改善に注力しているとのことです。
 
@@ -62,25 +63,25 @@ Ruby の GC は基本的には Mark&Sweep 方式で実装されており、オ�
 
 ! Ninja Talks 『RubyConfのNinjaの話の続きのおはなし』
 
-::http://farm9.staticflickr.com/8091/8563617537_ec25faef2b.jpg
+http://farm9.staticflickr.com/8091/8563617537_ec25faef2b.jpg
 
 @yuri_at_earth さんによる、mruby を使った組み込み開発入門のお話でした。組み込み開発は「プログラミングを書いて何かする」状態にするまでの環境整備がとても大変なので、挫折してしまう人が多いとのことです。そこで STM32F4-Discovery という安価な組み込み評価キットをターゲットにして、mruby で組み込み開発をできるようにするまでの手順を整備して、組み込み開発にたどりつくまでの敷居を下げる取り組みをされているとのことでした。
 
 ! Ninja Talks 『Travis-ciでのemberjsのi18n』
 
-http://farm9.staticflickr.com/8386/8564721626_a727434028.jpg
+::http://farm9.staticflickr.com/8386/8564721626_a727434028.jpg
 
 @morgan_randy さんによる、JavaScript の MVC フレームワークである Ember.js を多言語に対応させるお話でした。Ember.js は JavaScript を利用した静的なサイトを作成するのに利用され、Travis CI の Web クライアントとしても利用されています。@morgan_randy さんは rake-pipeline-i18n-filter と localeapp-handlebars_i18n を利用して多言語用 YAML を JSON に変換して Ember.js による多言語対応の静的なサイトを構築するデモを実施されていました。
 
 ! Ninja Talks 『ぼくのかんがえたさいきょうのお問い合わせ管理システム』
 
-::http://farm9.staticflickr.com/8225/8563619399_be51d43d50.jpg
+http://farm9.staticflickr.com/8225/8563619399_be51d43d50.jpg
 
 @hsbt さんによる、@hsbt さんの勤務先のカスタマーサービス部門が利用している「お問い合わせ管理システム」の問題点を改善したお話でした。既存の「お問い合わせ管理システム」では SQL の LIKE 演算子による「なんちゃって全文検索」であったために動作が遅かったところを、Apache Solr による全文検索エンジンを組み込むことで高速化に成功したとのことでした。また今回実装された「お問い合わせ管理システム」Whispered とその動作環境を構築してくれる構成管理スクリプト whispered-puppet はオープンソースとして GitHub に公開されているそうですので、興味のある方は参照されてはいかがでしょうか。
 
 ! 基調講演 『Asakusa.rb vs. the World』
 
-http://farm9.staticflickr.com/8107/8564724310_fa86fbd143.jpg
+::http://farm9.staticflickr.com/8107/8564724310_fa86fbd143.jpg
 
 @a_matsuda さんによる、Asakusa.rb という「地の利」を生かして世界に打って出よう、というお話でした。Asakusa.rb には Ruby コミッターが参加することも多く、ここでしか聞くことのできない情報もあります。これは世界でも特異な環境であるから、この「位置エネルギー」を利用しようとのことでした。また「日本人である」ということはコミュニティに対して多様性を提供することができる、というメリットもあるそうです。
 
@@ -88,35 +89,37 @@ http://farm9.staticflickr.com/8107/8564724310_fa86fbd143.jpg
 
 ! Ninja Talks 『Diversity is Good. RailsGirls Tokyoの取り組みと、そしてあなたがいつか得られるもの』
 
-::http://farm9.staticflickr.com/8110/8563622103_2eee0136a3.jpg
+http://farm9.staticflickr.com/8110/8563622103_2eee0136a3.jpg
 
 @yotii23 さんによる、Rails Girls Tokyo というイベントについてのお話でした。Rails Girls は 2010 年から始まった「女性に Ruby on Rails の技術を伝える」というイベントで、ヨーロッパ、アジア、北米、南米など世界中で開催されているそうです。@yotii23 さんは第二回の Rails Girls Tokyo の主催者でもあり、女性だけでなく今まで技術が届かなかった「普通の人たち」の手に技術を伝えたい、そのために Rails Girls というイベントのフレームワークを活用してほしいとのことでした。 Rails Girls はイベントのマニュアルが GitHub に公開されていますので、同様のイベントを開催したいという方は参考にされてはいかがでしょうか。
 
 ! Ninja Talks 『From 0 to 1: How to Get Involved in "Open Source"』
 
-http://farm9.staticflickr.com/8516/8564725856_e996d4a059.jpg
+::http://farm9.staticflickr.com/8516/8564725856_e996d4a059.jpg
 
 @yuki24 さんによる、今までオープンソースに貢献したことのない人を対象とした「貢献のしかた」についてのお話でした。オープンソースへの貢献のしかた自体がひとつのスキルのようなものとのことで、良いバグレポートの書き方、良いバグ修正パッチの書き方を解説されていました。また心構えとしては、コードリーディングのスキルを高める、英語を学ぶなども必要とのことです。オープンソースのソフトウェアを利用していて不具合に遭遇したら、そのソフトウェアに何らかの貢献をすることで、そのソフトウェアを利用している他の人の問題解決にもつながるので、ぜひ「貢献する人」になってみてはいかがでしょうか。
 
 ! Ninja Talks 『Rubyを始点としてもう一つのエンタープライズ開発を続けたあるSIerの事例』
 
-::http://farm9.staticflickr.com/8381/8564726866_047d47ff13.jpg
+http://farm9.staticflickr.com/8381/8564726866_047d47ff13.jpg
 
 @takeshinoda さんによる、Ruby を利用してタクシー会社向けの業務システム開発をされた事例のお話でした。よくある業務システム開発の「最初に仕様を決めてから開発をする」ではなく、顧客の要望を聞きながら徐々にソフトウェアを作り上げていく開発手法を取ったために、「動いているソフトウェアに手をつけない」という発想からの転換が大変だったそうです。そのために開発メンバーが Ruby のカンファレンスに参加するなどして Ruby コミュニティに触れていくことで Ruby の文化を学び、今までとは違う常識を身につけていったとのことでした。
 
 ! 招待講演 『桐島、Rubyやめるってよ』
 
-http://farm9.staticflickr.com/8231/8564726104_00031778bb.jpg
+::http://farm9.staticflickr.com/8231/8564726104_00031778bb.jpg
 
 @nari3 さんによる、プログラミングへの向きあい方についてのお話でした。プログラミングは楽しいけれど、すごいプロダクトは誰もが作れるわけでもなく、またスター級のプログラマと比較してしまうと、どうしても見劣りしてしまいます。そんな劣等感に苛まれないようにするためには、すごいプロダクトを作ろうと意気込むのではなく、プログラミング自体を楽しむようにすると良いとのことでした。またプログラミング自体を楽しむものとして「プログラミングコンテスト」の紹介をされていましたので、興味のある方はチャレンジしてみてはいかがでしょうか。
 
 ! 懇親会
 
-::{{attach_view('1.JPG')}}
+{{attach_view('1.JPG')}}
 
 懇親会は深川めしで有名な大正 13 年創業の老舗「割烹 みや古」で行われました。「古き良き下町の宴会場」という雰囲気の店内であったため席の移動もしやすく、参加者は Ruby の話題で大いに盛り上がりました。こうした懇親会では発表者の方々と交流することができるのもまた嬉しいところですね。
 
 ! 写真の提供
+
+@koichiroo さん 撮影 http://www.flickr.com/photos/koichiroo/sets/72157633010817089/
 
 @kakutani さん 撮影 http://www.flickr.com/photos/kakutani/sets/72157633016122230/
 
